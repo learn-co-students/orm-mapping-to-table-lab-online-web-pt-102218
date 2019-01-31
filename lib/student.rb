@@ -2,7 +2,7 @@ class Student
   attr_accessor :name, :grade
   attr_reader :id
 
-   def initialize(name, grade, id=nil)
+  def initialize(name, grade, id=nil)
     @name = name
     @grade = grade
     @id = id
@@ -18,7 +18,7 @@ class Student
     DB[:conn].execute(sql) 
   end
 
-   def self.drop_table
+  def self.drop_table
     sql =  <<-SQL
     DROP TABLE students
     SQL
